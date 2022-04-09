@@ -1,0 +1,23 @@
+.container{
+    position: relative;
+    width: 100%;
+    background-color: rgb(166, 206, 242);
+}
+.text{
+    position: absolute;
+    top: 100px;
+    left: 30px;
+}
+.text h1{
+    color: rgb(11, 82, 130);
+    font-size: 40px;
+    text-shadow: 2px 1px rgb(21, 83, 177) ;
+}
+.text p{
+    color: rgb(202, 35, 35);
+    font-size: 20px;
+    font-weight: bold;
+}
+.container img{
+    width: 100%;
+}
