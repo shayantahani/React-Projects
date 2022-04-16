@@ -28,7 +28,11 @@ const Navbar = () => {
         <li>City guide</li>
         <li>Location</li>
         <li>About city</li>
-        <img src={Logo} style={{ width: "50px", borderRadius: "10px" }} />
+        <img
+          src={Logo}
+          style={{ width: "50px", borderRadius: "10px" }}
+          alt="logo"
+        />
       </Ul>
     </>
   );
