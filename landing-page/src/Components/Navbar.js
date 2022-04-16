@@ -1,21 +1,37 @@
-import React from 'react';
-import Logo from "./images/sfLogo.png"
-import styles from "./Navbar.module.css"
+import React from "react";
+import styled from "styled-components";
+import Logo from "./images/sfLogo.png";
+const Ul = styled.ul`
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  height: 100px;
+  align-items: center;
+  list-style: none;
+  background: rgb(235, 118, 68);
+  z-index: 14;
+  li {
+    padding: 5px 15px;
+    font-size: 22px;
+    font-weight: bold;
+  }
+  li:hover {
+    color: rgb(156, 74, 40);
+    cursor: pointer;
+  }
+`;
 const Navbar = () => {
-    return (
-        <div className={styles.navbar}>
-            <div className='list-container'>
-                <ul className={styles.list}>
-                    <li>Home page</li>
-                    <li>City guide</li>
-                    <li>More About city</li>
-                </ul>
-            </div>
-            <div>
-                <img src={Logo} className={styles.logo} alt='Logo'/>
-            </div>
-        </div>
-    );
+  return (
+    <>
+      <Ul>
+        <li>Home</li>
+        <li>City guide</li>
+        <li>Location</li>
+        <li>About city</li>
+        <img src={Logo} style={{ width: "50px", borderRadius: "10px" }} />
+      </Ul>
+    </>
+  );
 };
 
 export default Navbar;

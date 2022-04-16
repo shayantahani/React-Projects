@@ -1,7 +1,7 @@
 .container{
     display: flex;
     justify-content: space-around;
-    margin: 30px;
+    margin: 25px;
 }
 .container h1{
     font-size: 2.5rem;
@@ -11,7 +11,8 @@
 .container input{
     font-size: 30px;
     padding: 10px;
-    border:rgb(88, 145, 194) 2px solid ;
+    border:none ;
+    background-color: rgb(206, 227, 246);
     border-radius: 20px;
     outline: none;
 }

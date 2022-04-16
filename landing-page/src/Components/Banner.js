@@ -6,7 +6,7 @@ const Banner = () => {
     <div className={styles.container}>
       <img src={banner} alt="SF View" />
       <div className={styles.text}>
-        <h1>San Francisco Food</h1>
+        <h1>San Francisco</h1>
         <p>United states</p>
       </div>
     </div>
