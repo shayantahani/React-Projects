@@ -1,10 +1,6 @@
 .container img {
   width: 300px;
-  opacity: .8;
   cursor: pointer;
-}
-.container img:hover{
-  opacity: 1;
 }
 .container {
   margin: 10px;
@@ -17,7 +13,6 @@
   color: #696969;
   margin: 30px 20px 20px;
 }
-
 .container p {
   margin: 0 25px 20px;
   background-color: rgb(19, 176, 61);
@@ -26,4 +21,23 @@
   border-radius: 5px;
   color: #fff;
   cursor: pointer;
+}
+.counter{
+  display: flex;
+  align-items: center;
+  margin: 10px;
+  padding: 10px;
+  border-top: solid rgb(131, 128, 128) 2px;
+}
+.counter img{
+  width: 25px;
+  margin: 10px;
+}
+.counter span{
+  background-color: #27b870;
+  padding: 8px;
+  border-radius: 20px;
+}
+.deactivate{
+  opacity: 0.2;
 }
