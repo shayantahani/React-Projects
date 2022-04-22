@@ -23,14 +23,20 @@ class Card extends Component {
   };
   render() {
     const { image, name, cost } = this.props;
+    const { counter } = this.state;
     return (
       <div className={styles.container}>
         <img src={image} alt="smart phone" />
         <h3>{name}</h3>
         <p>{cost}</p>
         <div className={styles.counter}>
-          <img className={this.state.counter ? "": styles.deactivate } src={down} alt="down" onClick={this.downHandler} />
-          <span>{this.state.counter}</span>
+          <img
+            className={!counter && styles.deactivate}
+            src={down}
+            alt="down"
+            onClick={this.downHandler}
+          />
+          <span>{counter}</span>
           <img src={up} alt="up" onClick={this.upHandler} />
         </div>
       </div>
