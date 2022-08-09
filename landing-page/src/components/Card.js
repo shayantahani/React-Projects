@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import styles from "./Card.module.css";
 import down from "../images/down.svg";
 import up from "../images/up.svg";
+import { Link } from "react-router-dom";
 class Card extends Component {
   constructor() {
     super();
@@ -22,12 +23,14 @@ class Card extends Component {
     }));
   };
   render() {
-    const { image, name, cost } = this.props;
+    const { image, name, cost, id } = this.props;
     const { counter } = this.state;
     return (
       <div className={styles.container}>
         <img src={image} alt="smart phone" />
-        <h3>{name}</h3>
+        <h3>
+          <Link to={`/products/${id}`}>{name}</Link>
+        </h3>
         <p>{cost}</p>
         <div className={styles.counter}>
           <img

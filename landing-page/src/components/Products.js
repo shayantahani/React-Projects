@@ -27,7 +27,7 @@ class Products extends Component {
                 cost={`${product.price} $`}
               />
             ))
-          : "Loading..."}
+          : <h1>Loading...</h1>}
       </div>
     );
   }
