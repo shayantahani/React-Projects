@@ -1,5 +1,6 @@
 .container img {
   width: 300px;
+  height: 300px;
   cursor: pointer;
 }
 .container {
@@ -31,6 +32,7 @@
 }
 .counter img{
   width: 25px;
+  height: fit-content;
   margin: 10px;
 }
 .counter span{
