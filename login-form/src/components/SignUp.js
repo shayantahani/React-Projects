@@ -3,6 +3,7 @@ import { validate } from "./Validate";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { notify } from "./toastify";
+import styles from "./Signup.module.css";
 const SignUp = () => {
   const [data, setData] = useState({
     username: "",
@@ -42,12 +43,17 @@ const SignUp = () => {
     }
   };
   return (
-    <div>
-      <form onSubmit={submitHandler}>
-        <h2>SignUp</h2>
-        <div>
+    <div className={styles.container}>
+      <form className={styles.formContainer} onSubmit={submitHandler}>
+        <h2 className={styles.header}>SignUp</h2>
+        <div className={styles.formField}>
           <label>Username</label>
           <input
+            className={
+              errors.username && touched.username
+                ? styles.uncompleted
+                : styles.formInput
+            }
             name="username"
             value={data.username}
             onChange={changeHandler}
@@ -57,9 +63,14 @@ const SignUp = () => {
             <span>{errors.username}</span>
           )}
         </div>
-        <div>
+        <div className={styles.formField}>
           <label>Email</label>
           <input
+            className={
+              errors.email && touched.email
+                ? styles.uncompleted
+                : styles.formInput
+            }
             name="email"
             value={data.email}
             onChange={changeHandler}
@@ -67,9 +78,14 @@ const SignUp = () => {
           />
           {errors.email && touched.email && <span>{errors.email}</span>}
         </div>
-        <div>
+        <div className={styles.formField}>
           <label>Password</label>
           <input
+            className={
+              errors.password && touched.password
+                ? styles.uncompleted
+                : styles.formInput
+            }
             type="password"
             name="password"
             value={data.password}
@@ -80,9 +96,14 @@ const SignUp = () => {
             <span>{errors.password}</span>
           )}
         </div>
-        <div>
+        <div className={styles.formField}>
           <label>Confirm Password</label>
           <input
+            className={
+              errors.confirmPass && touched.confirmPass
+                ? styles.uncompleted
+                : styles.formInput
+            }
             type="password"
             name="confirmPass"
             value={data.confirmPass}
@@ -93,20 +114,22 @@ const SignUp = () => {
             <span>{errors.confirmPass}</span>
           )}
         </div>
-        <div>
-          <label>I accept terms and conditions</label>
-          <input
-            type="checkbox"
-            name="IsAccepted"
-            value={data.IsAccepted}
-            onChange={changeHandler}
-          />
+        <div className={styles.formField}>
+          <div className={styles.checkboxContainer}>
+            <label>I accept terms and conditions</label>
+            <input
+              type="checkbox"
+              name="IsAccepted"
+              value={data.IsAccepted}
+              onChange={changeHandler}
+            />
+          </div>
           {errors.IsAccepted && touched.IsAccepted && (
             <span>{errors.IsAccepted}</span>
           )}
         </div>
-        <div>
-          <a href="google.com">Login</a>
+        <div className={styles.formButtons}>
+          <a href="#">Login</a>
           <button type="submit">SignUp</button>
         </div>
       </form>
