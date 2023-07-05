@@ -3,7 +3,7 @@ import { validate } from "./Validate";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { notify } from "./toastify";
-import { Link } from "react-router-dom/cjs/react-router-dom.min";
+import { Link } from "react-router-dom";
 import styles from "./Signup.module.css";
 const SignUp = () => {
   const [data, setData] = useState({
