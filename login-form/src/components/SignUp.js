@@ -3,6 +3,7 @@ import { validate } from "./Validate";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { notify } from "./toastify";
+import { Link } from "react-router-dom/cjs/react-router-dom.min";
 import styles from "./Signup.module.css";
 const SignUp = () => {
   const [data, setData] = useState({
@@ -33,7 +34,7 @@ const SignUp = () => {
     }
   };
   useEffect(() => {
-    setErrors(validate(data));
+    setErrors(validate(data, "SignUp"));
   }, [data]);
   const changeHandler = (event) => {
     if (event.target.name === "IsAccepted") {
@@ -129,7 +130,7 @@ const SignUp = () => {
           )}
         </div>
         <div className={styles.formButtons}>
-          <a href="#">Login</a>
+          <Link to="/login">Login</Link>
           <button type="submit">SignUp</button>
         </div>
       </form>
