@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import getApi from "../services/Api";
 import Loader from "./Loader";
 import Coin from "./Coin";
+import styles from "./Landing.module.css";
 const Landing = () => {
   const [coins, setCoins] = useState([]);
   const [search, setSearch] = useState("");
@@ -19,8 +20,9 @@ const Landing = () => {
     coin.name.toLowerCase().includes(search.toLowerCase())
   );
   return (
-    <>
+    <div className={styles.coinContainer}>
       <input
+        className={styles.input}
         type="text"
         placeholder="search"
         value={search}
@@ -41,7 +43,7 @@ const Landing = () => {
       ) : (
         <Loader />
       )}
-    </>
+    </div>
   );
 };
 
