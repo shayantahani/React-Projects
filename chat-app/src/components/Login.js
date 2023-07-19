@@ -7,7 +7,7 @@ const Login = () => {
   return (
     <div className={styles.loginPage}>
       <div className={styles.loginCard}>
-        <h1>welcome to my Chat app!</h1>
+        <h1 className={styles.text}>welcome to Chatgram!</h1>
         <div
           className={styles.button}
           onClick={() =>
